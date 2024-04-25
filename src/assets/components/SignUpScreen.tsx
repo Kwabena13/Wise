@@ -41,11 +41,11 @@ const SignUpScreen = () => {
  };
 
  // Apply theme-specific styles
- const theme = Colors.dark|| Colors.light;
+ const theme = Colors[colorScheme] || Colors.light;
 
  return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <Image
+      <Animated.Image
         source={require('../assets/icons/wiseTutor.png')}
         style={[styles.logo, { transform: [{ scale: logoAnimation }] }]}
       />
